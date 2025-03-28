@@ -1,6 +1,38 @@
+body{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* NAVBAR*/
+.navbar{
+    background-color: #333!important;
+    border-bottom: 1px solid black !important;
+}
+
+.navbar-nav{
+    margin: auto !important;
+}
+
+.navbar-brand{
+    font-weight: bold !important;
+    font-size: 2em !important;
+}
+
+.nav-link{
+    color: white !important;
+    font-size: 1.5em !important;
+    letter-spacing: 2px !important;
+}
+
+
+
+
 footer{
     background-color: #333 !important;
     border-top: 2px solid black !important;
     color: white !important;
-    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.8em !important;
 }
