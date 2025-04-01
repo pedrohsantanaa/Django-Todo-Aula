@@ -24,7 +24,55 @@ body{
     letter-spacing: 2px !important;
 }
 
+/*Botão Adicionar*/
 
+.add-div{
+    background-color: blue !important;
+    color: white !important;
+    padding: 0.5em !important;
+    border-radius: 5px !important;
+}
+
+#add-button{
+    text-decoration: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/*Main*/
+.list-div{
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+}
+
+.barra{
+    margin-top: 1em !important;
+}
+
+.input-group-btn{
+    border: 1px solid rgba(0, 0, 0, 0.206) !important;
+    border-radius: 5px !important;
+}
+
+/*Lista*/
+
+.item{
+    border-bottom: 1px dotted black !important;
+    height: 3em !important;
+    font-size: 2em !important;
+    margin-top: 1em !important;
+}
+
+.fa.fa-trash{
+    color: red !important;
+}
+.fa.fa-edit{
+    color: green !important;
+}
+
+.icones{
+    text-align: end !important;
+}
 
 
 footer{
