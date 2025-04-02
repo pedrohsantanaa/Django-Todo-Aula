@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Tarefas
+from .forms import TarefaForm
 
 # Create your views here.
 
@@ -10,3 +11,17 @@ def listaTarefa(request):
 def tarefaView(request, id):
     tarefa = get_object_or_404(Tarefas, pk=id)
     return render(request, 'tarefas/tarefa.html', {'tarefa':tarefa})
+
+def novaTarefa(request):
+    if request.method == 'POST':
+        form = TarefaForm(request.POST)
+
+        if form.is_valid():
+            tarefa = form.save(commit=False)
+            tarefa.status = 'andamento'
+            tarefa.save()
+            return redirect('/')
+
+    else:
+        form = TarefaForm()
+        return render(request, 'tarefas/addTarefa.html', {'form':form})
