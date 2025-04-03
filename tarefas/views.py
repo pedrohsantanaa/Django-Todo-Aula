@@ -42,3 +42,8 @@ def editTarefa(request, id):
     
     else:
         return render(request, 'tarefas/editTarefa.html', {'form':form, 'tarefa':tarefa})
+    
+def deleteTarefa(request, id):
+    tarefa = get_object_or_404(Tarefas, pk=id)
+    tarefa.delete()
+    return redirect('/')
