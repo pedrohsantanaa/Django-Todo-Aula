@@ -13,4 +13,9 @@ document.querySelectorAll(".delete-btn").forEach(
 
         });
     }
-)
+);
+
+//Função para Pesquisar
+document.getElementById("search-bt").addEventListener("click", function(){
+    document.getElementById("search-form").onsubmit();
+});

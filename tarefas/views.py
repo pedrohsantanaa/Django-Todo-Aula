@@ -4,9 +4,20 @@ from .forms import TarefaForm
 
 # Create your views here.
 
+
 def listaTarefa(request):
-    tarefas = Tarefas.objects.all().order_by('-created_at')
-    return render(request, 'tarefas/list.html', {'tarefas':tarefas})
+    tarefas_list = Tarefas.objects.all().order_by('-created_at')
+
+    search = request.GET.get('search')
+
+    if search:
+        tarefas = Tarefas.objects.filter(titulo__icontains=search)
+        return render(request, 'tarefas/list.html', {'tarefas':tarefas})
+    
+    else:
+        return render(request, 'tarefas/list.html', {'tarefas':tarefas_list})
+
+    
 
 def tarefaView(request, id):
     tarefa = get_object_or_404(Tarefas, pk=id)
