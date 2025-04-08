@@ -87,3 +87,14 @@ footer{
     justify-content: center !important;
     padding: 0.8em !important;
 }
+
+/*Login*/
+.auth-card{
+    margin-bottom: 2em !important;
+    margin-top: 2em !important;
+}
+
+.change-form-p{
+    margin-top: 2em !important;
+    text-align: center !important;
+}
